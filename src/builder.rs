@@ -37,6 +37,7 @@ where
     pub fn install(self) {
         #[cfg(feature = "dotenv")]
         dotenv::install();
+        #[cfg(feature = "log")]
         let context = self.context.unwrap_or_else(Context::load);
         #[cfg(feature = "log")]
         log::install(&context, self.log);
