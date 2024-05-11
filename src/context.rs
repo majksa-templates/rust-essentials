@@ -1,4 +1,5 @@
-use std::env;
+use serde::{Deserialize, Deserializer};
+use serde_env::from_env;
 
 #[derive(Debug, PartialEq, Eq)]
 pub enum Environment {
@@ -6,38 +7,39 @@ pub enum Environment {
     Production,
 }
 
-impl From<&str> for Environment {
-    fn from(s: &str) -> Self {
-        match s {
-            "development" => Self::Development,
-            "production" => Self::Production,
-            _ => Self::Development,
+impl Default for Environment {
+    fn default() -> Self {
+        Self::Development
+    }
+}
+
+impl From<String> for Environment {
+    fn from(s: String) -> Self {
+        match s.to_lowercase().as_str() {
+            "p" | "prod" | "production" => Self::Production,
+            "d" | "dev" | "development" | _ => Self::Development,
         }
     }
 }
 
-impl From<Option<String>> for Environment {
-    fn from(e: Option<String>) -> Self {
-        match e {
-            Some(e) => e.as_str().into(),
-            None => Self::Development,
-        }
+impl<'de> Deserialize<'de> for Environment {
+    fn deserialize<D>(deserializer: D) -> Result<Environment, D::Error>
+    where
+        D: Deserializer<'de>,
+    {
+        let s = String::deserialize(deserializer)?;
+        Ok(s.into())
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Deserialize, Default)]
 pub struct Context {
-    pub environment: Environment,
+    #[serde(default)]
+    pub app_env: Environment,
 }
 
 impl Context {
-    pub fn new(environment: Environment) -> Self {
-        Self { environment }
-    }
-
     pub fn load() -> Self {
-        Self {
-            environment: env::var("APP_ENV").ok().into(),
-        }
+        from_env().unwrap()
     }
 }

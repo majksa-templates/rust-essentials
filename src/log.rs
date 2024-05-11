@@ -9,7 +9,7 @@ pub fn install<L>(context: &Context, tracing: Option<L>)
 where
     L: SubscriberInitExt,
 {
-    let is_development = context.environment == Environment::Development;
+    let is_development = context.app_env == Environment::Development;
     if let Some(tracing) = tracing {
         tracing.init();
     } else if is_development {
