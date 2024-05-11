@@ -1,16 +1,3 @@
-//! Example of a simple library
-//!
-//! # Examples
-//!
-//! ```
-//! use rust_lib::add;
-//!
-//! fn main() {
-//!     let result = add(2, 2);
-//!     assert_eq!(result, 4);
-//! }
-//! ```
-
 mod builder;
 mod context;
 
@@ -19,6 +6,7 @@ mod log;
 
 use builder::Builder;
 pub use context::Context;
+pub use tracing;
 use tracing_subscriber::{util::SubscriberInitExt, Registry};
 
 pub fn install() {

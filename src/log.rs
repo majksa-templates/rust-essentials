@@ -1,16 +1,3 @@
-//! Example of a simple library
-//!
-//! # Examples
-//!
-//! ```
-//! use rust_lib::add;
-//!
-//! fn main() {
-//!     let result = add(2, 2);
-//!     assert_eq!(result, 4);
-//! }
-//! ```
-
 use tracing::warn;
 #[cfg(feature = "panic")]
 use tracing_panic::panic_hook;
