@@ -9,7 +9,7 @@ mod dotenv;
 
 use builder::Builder;
 pub use context::Context;
-pub use tracing;
+pub use tracing::{debug, error, info, trace, warn};
 use tracing_subscriber::{util::SubscriberInitExt, Registry};
 
 pub fn install() {

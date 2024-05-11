@@ -1,4 +1,4 @@
-use essentials::tracing::*;
+use essentials::*;
 
 fn main() {
     essentials::install();
