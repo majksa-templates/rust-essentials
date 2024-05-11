@@ -10,17 +10,24 @@
 //!     assert_eq!(result, 4);
 //! }
 //! ```
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+
+mod builder;
+mod context;
+
+#[cfg(feature = "log")]
+mod log;
+
+use builder::Builder;
+pub use context::Context;
+use tracing_subscriber::{util::SubscriberInitExt, Registry};
+
+pub fn install() {
+    Builder::<Registry>::default().install();
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+pub fn builder<L>() -> builder::Builder<L>
+where
+    L: SubscriberInitExt + Default,
+{
+    Builder::new()
 }
