@@ -2,8 +2,9 @@
   "packages": {
     ".": {
       "extra-files": [
-		"README.md"
-	  ]
+        "README.md"
+      ]
     }
-  }
+  },
+  ".": "0.2.0"
 }
