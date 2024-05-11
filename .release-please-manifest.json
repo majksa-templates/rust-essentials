@@ -1,3 +1,9 @@
 {
-	"extra-files": ["README.md"]
+  "packages": {
+    ".": {
+      "extra-files": [
+		"README.md"
+	  ]
+    }
+  }
 }
