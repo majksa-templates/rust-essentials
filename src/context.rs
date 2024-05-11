@@ -17,7 +17,7 @@ impl From<String> for Environment {
     fn from(s: String) -> Self {
         match s.to_lowercase().as_str() {
             "p" | "prod" | "production" => Self::Production,
-            "d" | "dev" | "development" | _ => Self::Development,
+            _ => Self::Development,
         }
     }
 }

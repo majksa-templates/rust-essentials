@@ -31,10 +31,8 @@ where
             )
             .init();
     }
-    if is_development {
-        if color_eyre::install().is_err() {
-            warn!("Failed to install color_eyre");
-        }
+    if is_development & color_eyre::install().is_err() {
+        warn!("Failed to install color_eyre");
     }
     #[cfg(feature = "panic")]
     std::panic::set_hook(Box::new(panic_hook));
