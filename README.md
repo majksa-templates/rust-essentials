@@ -14,9 +14,9 @@ To use `essentials`, add the following to your Cargo.toml:
 
 ```toml
 [dependencies]
-essentials = { version = "0.1.0", git = "https://github.com/majksa-dev/rust-essentials", tag = "v0.1.0" }
+essentials = { version = "0.2.0", git = "https://github.com/majksa-dev/rust-essentials", tag = "v0.1.0" }
 ```
 
-or simply run `cargo add --git https://github.com/majksa-dev/rust-essentials --tag v0.1.0`
+or simply run `cargo add --git https://github.com/majksa-dev/rust-essentials --tag v0.2.0`
 
 <!-- x-release-please-end -->
