@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/majksa-dev/rust-essentials/compare/v0.3.0...v0.3.1) (2024-05-11)
+
+
+### Bug Fixes
+
+* simplify branches ([9e5f50e](https://github.com/majksa-dev/rust-essentials/commit/9e5f50e9b163d7501e79cf02ac3ec4df48202b3a))
+
 ## [0.3.0](https://github.com/majksa-dev/rust-essentials/compare/v0.2.0...v0.3.0) (2024-05-11)
 
 
