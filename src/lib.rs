@@ -4,6 +4,9 @@ mod context;
 #[cfg(feature = "log")]
 mod log;
 
+#[cfg(feature = "dotenv")]
+mod dotenv;
+
 use builder::Builder;
 pub use context::Context;
 pub use tracing;

@@ -1,5 +1,7 @@
 use tracing_subscriber::util::SubscriberInitExt;
 
+#[cfg(feature = "dotenv")]
+use crate::dotenv;
 #[cfg(feature = "log")]
 use crate::log;
 use crate::Context;
@@ -33,10 +35,10 @@ where
     }
 
     pub fn install(self) {
+        #[cfg(feature = "dotenv")]
+        dotenv::install();
+        let context = self.context.unwrap_or_else(Context::load);
         #[cfg(feature = "log")]
-        {
-            let context = self.context.unwrap_or_else(Context::load);
-            log::install(&context, self.log);
-        }
+        log::install(&context, self.log);
     }
 }

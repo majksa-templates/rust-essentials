@@ -1,4 +1,4 @@
-use tracing::warn;
+use tracing::{level_filters::LevelFilter, warn};
 #[cfg(feature = "panic")]
 use tracing_panic::panic_hook;
 use tracing_subscriber::{fmt, prelude::*, util::SubscriberInitExt, EnvFilter};
@@ -15,12 +15,20 @@ where
     } else if is_development {
         tracing_subscriber::registry()
             .with(fmt::layer().pretty())
-            .with(EnvFilter::from_default_env())
+            .with(
+                EnvFilter::builder()
+                    .with_default_directive(LevelFilter::TRACE.into())
+                    .from_env_lossy(),
+            )
             .init();
     } else {
         tracing_subscriber::registry()
             .with(fmt::layer().json())
-            .with(EnvFilter::from_default_env())
+            .with(
+                EnvFilter::builder()
+                    .with_default_directive(LevelFilter::INFO.into())
+                    .from_env_lossy(),
+            )
             .init();
     }
     if is_development {
