@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/majksa-dev/rust-essentials/compare/v0.3.2...v0.3.3) (2024-06-13)
+
+
+### Bug Fixes
+
+* set panic hook only in production ([60be5a6](https://github.com/majksa-dev/rust-essentials/commit/60be5a6dd3d27bd742ecbdd8860bdcba3f944dbb))
+
 ## [0.3.2](https://github.com/majksa-dev/rust-essentials/compare/v0.3.1...v0.3.2) (2024-06-13)
 
 
