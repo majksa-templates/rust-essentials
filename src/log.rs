@@ -35,5 +35,7 @@ where
         warn!("Failed to install color_eyre");
     }
     #[cfg(feature = "panic")]
-    std::panic::set_hook(Box::new(panic_hook));
+    if !is_development {
+        std::panic::set_hook(Box::new(panic_hook));
+    }
 }
