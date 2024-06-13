@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/majksa-dev/rust-essentials/compare/v0.3.1...v0.3.2) (2024-06-13)
+
+
+### Bug Fixes
+
+* default no features, add all option ([adc23a0](https://github.com/majksa-dev/rust-essentials/commit/adc23a0b42bf17e24643309e4da260fd19a76c83))
+* **deps:** bump serde from 1.0.201 to 1.0.203 ([bd510c2](https://github.com/majksa-dev/rust-essentials/commit/bd510c26010769892bb8439ff5f0b869d6e0ba0f))
+
 ## [0.3.1](https://github.com/majksa-dev/rust-essentials/compare/v0.3.0...v0.3.1) (2024-05-11)
 
 
