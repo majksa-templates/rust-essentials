@@ -4,7 +4,8 @@ version = "0.3.1"
 edition = "2021"
 
 [features]
-default = ["log", "panic", "dotenv"]
+default = []
+all = ["log", "panic", "dotenv"]
 log = []
 panic = ["log"]
 dotenv = []
