@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.5](https://github.com/majksa-dev/rust-essentials/compare/v0.3.4...v0.3.5) (2024-06-21)
+
+
+### Bug Fixes
+
+* add release please tagger action ([221a58f](https://github.com/majksa-dev/rust-essentials/commit/221a58f44736268d3b527bb88f6632a3b82fecd2))
+* remove v prefix ([085911d](https://github.com/majksa-dev/rust-essentials/commit/085911d17e308b12ff413a7aad513f16cc105ad9))
+
 ## [0.3.4](https://github.com/majksa-dev/rust-essentials/compare/v0.3.3...v0.3.4) (2024-06-21)
 
 
