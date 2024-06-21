@@ -11,11 +11,11 @@ panic = ["log"]
 dotenv = []
 
 [dependencies]
-tracing = { version = "0.1" }
-tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
-tracing-panic = "0.1"
-eyre = { version = "0.6", default-features = false, features = ["auto-install", "track-caller"] }
-color-eyre = "0.6"
+tracing = { version = "0.1.40" }
+tracing-subscriber = { version = "0.3.18", features = ["json", "env-filter"] }
+tracing-panic = "0.1.2"
+eyre = { version = "0.6.12", default-features = false, features = ["auto-install", "track-caller"] }
+color-eyre = "0.6.3"
 dotenv = "0.15.0"
 serde = { version = "1.0.203", features = ["derive"] }
 serde-env = "0.1.1"
