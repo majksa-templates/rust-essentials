@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.6](https://github.com/majksa-dev/rust-essentials/compare/v0.3.5...v0.3.6) (2024-06-21)
+
+
+### Bug Fixes
+
+* pin to patch versions ([49f1e1a](https://github.com/majksa-dev/rust-essentials/commit/49f1e1a4bcc4096b52faa19d669f7b68087e3159))
+
 ## [0.3.5](https://github.com/majksa-dev/rust-essentials/compare/v0.3.4...v0.3.5) (2024-06-21)
 
 
