@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.4](https://github.com/majksa-dev/rust-essentials/compare/v0.3.3...v0.3.4) (2024-06-21)
+
+
+### Bug Fixes
+
+* move from actions to github apps ([3d76f29](https://github.com/majksa-dev/rust-essentials/commit/3d76f29a6011861a818218136875c22cccb2c50a))
+* run tests only on PRs ([ddf64f5](https://github.com/majksa-dev/rust-essentials/commit/ddf64f5ae6bcad64cb8ab00c32d87ecd4c0e5386))
+
 ## [0.3.3](https://github.com/majksa-dev/rust-essentials/compare/v0.3.2...v0.3.3) (2024-06-13)
 
 
