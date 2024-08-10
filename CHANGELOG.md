@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.7](https://github.com/majksa-dev/rust-essentials/compare/v0.3.6...v0.3.7) (2024-08-10)
+
+
+### Bug Fixes
+
+* **deps:** bump the dependencies group with 2 updates ([00bbd72](https://github.com/majksa-dev/rust-essentials/commit/00bbd725f457416c1cea447765389b34ed22bc7e))
+
 ## [0.3.6](https://github.com/majksa-dev/rust-essentials/compare/v0.3.5...v0.3.6) (2024-06-21)
 
 
