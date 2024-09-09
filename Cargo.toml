@@ -17,5 +17,5 @@ tracing-panic = "0.1.2"
 eyre = { version = "0.6.12", default-features = false, features = ["auto-install", "track-caller"] }
 color-eyre = "0.6.3"
 dotenv = "0.15.0"
-serde = { version = "1.0.205", features = ["derive"] }
+serde = { version = "1.0.210", features = ["derive"] }
 serde-env = "0.2.0"
